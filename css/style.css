@@ -826,7 +826,7 @@ ul.portfolio-image li .desc{
   clear: both;
 }
 .grid-item {
-  width: 33.333%;
+  width: 50%;
   float: left;
   top: 0px;
   left: 0px;
@@ -834,7 +834,7 @@ ul.portfolio-image li .desc{
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .grid-item .wrap-article {
   border: 1px solid rgba(129, 129, 129, 0.1);
@@ -912,7 +912,7 @@ ul.portfolio-image li .desc{
   width: 100%;
 }
 .bg-about {
-  background: url('../images/reza.jpg');
+  background: url('../images/jeff.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
