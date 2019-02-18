@@ -16,8 +16,10 @@
     <link href="css/owl.theme.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/slide.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+
     <!--fonts google-->
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
@@ -68,6 +70,9 @@
             <a data-scroll="" href="#employement">
               <span>服務經歷</span>
             </a>
+            <a data-scroll="" href="#photos">
+                <span>照片集錦</span>
+              </a>
 <!--             <a data-scroll="" href="#testimonial">
               <span>Testimonial</span>
             </a>
@@ -121,11 +126,9 @@
                 <div class="col-md-12">
                   <div class="wrap-about">
                     <div class="w-content">
+                       <h2>關於我</h2>
                       <p class="head-about">
-                        Hi, I’m Jeff, a master student , major in information management. Studying in National ChengChi University. - Seeking for intern in IT industry. - I’m interested in front-end programming , software engineering and other IT-related knowledge. Glad to meet you.                      </p>
-                      <h5 class="name">
-                        Jeff
-                      </h5>
+                        Hi, I’m Jeff, a master student , major in information management. Studying in National ChengChi University. - Seeking for intern in IT industry. - I’m interested in front-end programming , software engineering and other IT-related knowledge. Glad to meet you.</p>
                     </div>
                   </div>
                 </div>
@@ -297,6 +300,7 @@
                       <div class="col-md-6 col-sm-6">
                         <div class="wrap-card">
                           <div class="card">
+                              <img alt="blog-1" class="text-center" src="images/MSFT.png">
                             <h2 class="year">
                               2016/07~2019/09
                             </h2>
@@ -310,13 +314,12 @@
                             <hr>
                             <div class="text-detail">
                               <p>
-<ul>協助網頁/應用程式開發</ul>
-目前接觸到的語言為大多是C#和Javascript，大部分都在.NET的框架底下進行程式開發，例如利用UWP架構平台開發人臉辨識的打卡系統、利用ASP.NET Core根據企業需求提供系統，實習生的角色比較像協助開發並學習開發的技術
-<ul>協助資料庫整理</ul>
-這個部門跟許多企業都有合作和委託關係，有時會外派到企業去做資料庫的整理與彙整報表，常用資料庫語言MSSQL，這種任務要對資料庫操作要相對熟悉，會很感謝學校教的資料庫知識與技術。
-<ul>協助解決程式相關問題</ul>
-有時候主管會交代一些小任務，例如客戶有資料庫相關的問題，這時候必須自己去學習解決與分析問題，開始上網試各種方法，這時候也會學到很多各式各樣的解決辦法，透過自計的思考取修正成符合情境的解決方案，當主管信任你的做法，並提供給客戶會很有成就感
-
+                                <ul>協助網頁/應用程式開發</ul>
+                                目前接觸到的語言為大多是C#和Javascript，大部分都在.NET的框架底下進行程式開發，例如利用UWP架構平台開發人臉辨識的打卡系統、利用ASP.NET Core根據企業需求提供系統，實習生的角色比較像協助開發並學習開發的技術
+                                <ul>協助資料庫整理</ul>
+                                這個部門跟許多企業都有合作和委託關係，有時會外派到企業去做資料庫的整理與彙整報表，常用資料庫語言MSSQL，這種任務要對資料庫操作要相對熟悉，會很感謝學校教的資料庫知識與技術。
+                                <ul>協助解決程式相關問題</ul>
+                                有時候主管會交代一些小任務，例如客戶有資料庫相關的問題，這時候必須自己去學習解決與分析問題，開始上網試各種方法，這時候也會學到很多各式各樣的解決辦法，透過自計的思考取修正成符合情境的解決方案，當主管信任你的做法，並提供給客戶會很有成就感
                               </p>
                             </div>
                           </div>
@@ -328,6 +331,7 @@
                       <div class="col-md-6 col-sm-6">
                         <div class="wrap-card">
                           <div class="card">
+                              <img alt="blog-1" class="text-center" style="width: 120px;" src="images/IPO.png">
                             <h2 class="year">
                               2016/07~2016/09
                             </h2>
@@ -395,7 +399,7 @@
                 <div class="grid">
                   <div class="grid-item">
                     <div class="wrap-article">
-                      <img alt="blog-1" class="img-circle text-center" src="images/blog-1.png">
+                      <img alt="blog-1" class="img-circle text-center" src="images/nra1.jpg">
                       <p class="subtitle fancy">
                         <span>美宣長、部分活動總召</span>
                       </p>
@@ -412,7 +416,7 @@
 
                   <div class="grid-item">
                     <div class="wrap-article">
-                     <img alt="blog-4" class="img-circle text-center" src="images/blog-4.jpg">
+                     <img alt="blog-4" class="img-circle text-center" src="images/cc1.jpg">
                      <p class="subtitle fancy">
                         <span>美宣長</span>
                       </p>
@@ -434,135 +438,33 @@
           </div>
         </section>
         <!--/.BLOG END-->
-        
-        <!-- --------------------------------------------------------------------------------------------------- -->
-        <!--WORK-
-        <section class="grey-bg mar-tm-10" id="work">
+        <!-- SERVICES -->
+        <section class="white-bg" id="employement">
           <div class="container">
             <div class="row">
               <div class="col-md-3">
                 <h3 class="title-small">
-                  <span>Work</span>
+                  <span>服務經歷</span>
                 </h3>
-                <p class="content-detail">
-                  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br><br>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.
-                </p> 
-              </div>
-              <div class="col-md-9 content-right">
-                PORTFOLIO IMAGE
-                <ul class="portfolio-image">
-                  <li class="col-md-6">
-                    <a href="images/bw-1.png"><img alt="image" src="images/bw-1.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                           <p class="desc">My Resume</p>
-                        </div>
-
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-2.png"><img alt="image" src="images/bw-2.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Pangirutan
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-3.png"><img alt="image" src="images/bw-3.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Black Mug
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-4.png"><img alt="image" src="images/bw-4.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Notebook Mockup
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-5.png"><img alt="image" src="images/bw-5.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Presentation
-                          </p>  
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="col-md-6">
-                    <a href="images/bw-6.png"><img alt="image" src="images/bw-6.png">
-                      <div class="decription-wrap">
-                        <div class="image-bg">
-                          <p class="desc">
-                            Letter Branding
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-                /.PORTFOLIO IMAGE END-->
-              </div>
-            </div>
-          </div>
-        </section>
-        /.WORK END-->
-
-        <!--SERVICES
-        <section class="white-bg" id="services">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Services</span>
-                </h3>
-                <p class="content-detail">
+                <!-- <p class="content-detail">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </p>
+                </p> -->
               </div>
               <div class="col-md-9 content-right">
                 <div class="row">
+ 
+
                   <ul class="listing-item">
                     <li>
                       <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          c
-                        </h3>
+                        <p class="icon-use">
+                          d
+                        </p>
                         <p class="head-sm">
-                          MARKETING
+                          師資培育中心 & 暨大資管系 - 計畫助理
                         </p>
                         <p class="text-grey">
-                          Typi non habent claritatem insitam est usus legentis in iis qui facit eorum claritatem. 
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          b
-                        </h3>
-                        <p class="head-sm">
-                          WEB DESIGN
-                        </p>
-                        <p class="text-grey">
-                          Typi non habent claritatem insitam est usus legentis in iis qui facit eorum claritatem. 
+                          協助系統開發(前端開發)、文字編輯、文字校稿、英語摘要撰寫、協助老師資訊教育相關文獻 
                         </p>
                       </div>
                     </li>
@@ -573,26 +475,10 @@
                           d
                         </h3>
                         <p class="head-sm">
-                          UI
+                          數位學伴計畫 - 課輔教師
                         </p>
                         <p class="text-grey">
-                          Typi non habent claritatem insitam est usus legentis in iis qui facit eorum claritatem. 
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <p class="icon-use">
-                          f
-                        </p>
-                        <p class="head-sm">
-                          DIRECTOR
-                        </p>
-                        <p class="text-grey">
-                          Typi non habent claritatem insitam est usus legentis in iis qui facit eorum claritatem. 
+                          輔導國中小學生數學科(複習、預習) 
                         </p>
                       </div>
                     </li>
@@ -600,27 +486,13 @@
                     <li>
                       <div class="col-md-4 col-sm-4">
                         <h3 class="icon-use">
-                          p
+                          d
                         </h3>
                         <p class="head-sm">
-                          UX DESIGN
+                          台灣商業教育與管理學會 - 出納
                         </p>
                         <p class="text-grey">
-                          Typi non habent claritatem insitam est usus legentis in iis qui facit eorum claritatem. 
-                        </p>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-4 col-sm-4">
-                        <h3 class="icon-use">
-                          m
-                        </h3>
-                        <p class="head-sm">
-                          FRONT END
-                        </p>
-                        <p class="text-grey">
-                          Typi non habent claritatem insitam est usus legentis in iis qui facit eorum claritatem. 
+                          協助學會出納相關事務 
                         </p>
                       </div>
                     </li>
@@ -631,460 +503,89 @@
             </div>
           </div>
         </section>
-        /.SERVICES END-->
-
-        <!--EMPLOYEMENT
-        <section class="grey-bg" id="employement">
+      <!--/.SERVICES END-->
+      <section class="white-bg" id="photos">
           <div class="container">
             <div class="row">
               <div class="col-md-3">
                 <h3 class="title-small">
-                  <span>Employement</span>
+                  <span>照片集錦</span>
                 </h3>
-                <p class="content-detail">
+                <!-- <p class="content-detail">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </p>
+                </p> -->
               </div>
               <div class="col-md-9 content-right">
                 <div class="row">
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2007 - 2009
-                            </h2>
-                            <p class="job">
-                              web designer
-                            </p>
-                            <p class="company">
-                              Corp Project
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+         <div id="myCarousel" class="carousel slide">
+              <!-- 轮播（Carousel）指标 -->
+              <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                  <li data-target="#myCarousel" data-slide-to="4"></li>
+                  <li data-target="#myCarousel" data-slide-to="5"></li>
+                  <li data-target="#myCarousel" data-slide-to="6"></li>
+                  <li data-target="#myCarousel" data-slide-to="7"></li>
 
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2009 - 2010
-                            </h2>
-                            <p class="job">
-                              web designer
-                            </p>
-                            <p class="company">
-                              Google inc
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>  
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2010 - 2014
-                            </h2>
-                            <p class="job">
-                              crative director 
-                            </p>
-                            <p class="company">
-                              41 studio
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2014 - NOW
-                            </h2>
-                            <p class="job">
-                              fullstack designer
-                            </p>
-                            <p class="company">
-                              Freelance
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-
+              </ol>   
+              <!-- 轮播（Carousel）项目 -->
+              <div class="carousel-inner">
+                  <div class="item active">
+                      <img src="images/ipo1.jpg"  alt="ipo1">
+                  </div>
+                  <div class="item">
+                      <img src="images/ipo2.png"  alt="ipo2">
+                  </div>
+                  <div class="item">
+                      <img src="images/cc1.jpg"  alt="cc">
+                  </div>
+                  <div class="item">
+                      <img src="images/seminar1.jpg"  alt="seminar1">
+                  </div>
+                  <div class="item">
+                      <img src="images/microsoft1.jpg"  alt="microsoft1">
+                  </div>
+                  <div class="item">
+                      <img src="images/microsoft2.jpg"  alt="microsoft2">
+                  </div>
+                  <div class="item">
+                      <img src="images/nra1.jpg"  alt="nra1">
+                  </div>
+                  <div class="item">
+                      <img src="images/teach1.jpg"  alt="nra1">
+                  </div>
+              </div>
+              <!-- 轮播（Carousel）导航 -->
+              <a class="carousel-control left" href="#myCarousel" 
+                 data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+              <a class="carousel-control right" href="#myCarousel" 
+                 data-slide="next">&rsaquo;</a>
+          </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        /.EMPLOYEMENT END-->
 
-
-        <!--EDUCATION
-        <section class="grey-bg" id="education">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Education</span>
-                </h3>
-                <p class="content-detail">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </p>
-              </div>
-              <div class="col-md-9 content-right">
-                <div class="row">
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2002 - 2005
-                            </h2>
-                            <p class="job">
-                              Information System
-                            </p>
-                            <p class="company">
-                              Telkom University
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2005 - 2007
-                            </h2>
-                            <p class="job">
-                              DKV
-                            </p>
-                            <p class="company">
-                              UNIKOM
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="listing-item">
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2007 - 2009
-                            </h2>
-                            <p class="job">
-                              Magister DKV 
-                            </p>
-                            <p class="company">
-                              ITB
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="col-md-6 col-sm-6">
-                        <div class="wrap-card">
-                          <div class="card">
-                            <h2 class="year">
-                              2009 - 2010
-                            </h2>
-                            <p class="job">
-                              Typhography Magister
-                            </p>
-                            <p class="company">
-                              Florida University
-                            </p>
-                            <hr>
-                            <div class="text-detail">
-                              <p>
-                                Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanita per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        /.EDUCATION END-->
-
-        <!--TESTIMONIAL
-        <section id="testimonial">
-          <div class="container">
-            <div class="row wrap-testimonial">
-              <div class="col-md-10 col-md-offset-1">
-                <div class="owl-carousel">
-                  <div class="list-testimonial">
-                    <div class="content-testimonial">
-                      <h3 class="testi">
-                        “ Reza did a phenominal job setting up my a website for my product He performed the task very quickly and efficiently. We know we have the superior topical pain relief cream on the market and he has helped us communicate that message via the website he built from scratch. Thanks! ”
-                      </h3>
-                      <p class="people">
-                        Darin Cohen - Active10
-                      </p>
-                    </div>
-                  </div>
-                  <div class="list-testimonial">
-                     <div class="content-testimonial">
-                      <h3 class="testi">
-                        “ Another successful project working with Reza. He has great design skills, is very responsive and professional. Looking forward to the next opportunity to work together. ”
-                      </h3>
-                      <p class="people">
-                        Marko Milicevic
-                      </p>
-                    </div>
-                  </div>
-                  <div class="list-testimonial">
-                    <div class="content-testimonial">
-                      <h3 class="testi">
-                        “ Great designer! I like his sense of design, especially the color scheme. Quick turnaround. Look forward to work with him again. Thanks!! ”
-                      </h3>
-                      <p class="people">
-                        JK Thang
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mask-testimonial"></div>
-        </section>
-        /.TESTMONIAL END-->
-
-        <!--BLOG
-        <section class="grey-bg" id="blog">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h3 class="title-small-center text-center">
-                  <span>Blog</span>
-                </h3>
-                <div class="row">
-                  <div class="col-md-6 col-md-offset-3">
-                    <p class="content-details text-center">
-                      Lorem ipsum dolor sit amet consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. 
-                    </p>
-                  </div>
-                </div>
-                <!--GRID BLOG-->
-                <div class="grid">
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog-1" class="img-circle text-center" src="images/blog-1.png">
-                      <p class="subtitle fancy">
-                        <span>09/01/2015</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Popular Design in 2015 
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                     <img alt="blog-4" class="img-circle text-center" src="images/blog-4.jpg">
-                     <p class="subtitle fancy">
-                        <span>08/20/2015</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Just Start
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog6" class="img-circle text-center" src="images/blog-6.jpg">
-                      <p class="subtitle fancy">
-                        <span>08/11/2015</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          The Huffington Post
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog2" class="img-circle text-center" src="images/blog-2.jpg">
-                      <p class="subtitle fancy">
-                        <span>08/03/2015</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Manuk!
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="grid-item">
-                    <div class="wrap-article">
-                      <img alt="blog5" class="img-circle text-center" src="images/blog-5.jpg">
-                      <p class="subtitle fancy">
-                        <span>07/26/2015</span>
-                      </p>
-                      <a href="#">
-                        <h3 class="title">
-                          Do Web Designer Really Need To Know UI/UX Design and Backend Code too?
-                        </h3>
-                      </a>
-                      <p class="content-blog">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-                      </p>
-                    </div>
-                  </div>              
-
-                </div>
-                <!--/.GRID BLOG END-->
-              </div>
-            </div>
-          </div>
-        </section>
-        /.BLOG END-->
-
-        <!--CONTACT
-        <section id="contact" class="white-bg">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <h3 class="title-small">
-                  <span>Contact</span>
-                </h3>
-                <p class="content-detail">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                </p>
-
-              </div>
-              <div class="col-md-9 content-right">
-                <form>
-                  <div class="group">
-                    <input required="" type="text"><span class="highlight"></span><span class="bar"></span><label>Name</label>
-                  </div>
-                  <div class="group">
-                    <input required="" type="email"><span class="highlight"></span><span class="bar"></span><label>Email</label>
-                  </div>
-                  <div class="group">
-                    <textarea required=""></textarea><span class="highlight"></span><span class="bar"></span><label>Message</label>
-                  </div>
-                  <input id="sendMessage" name="sendMessage" type="submit" value="Send Message">
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        /.CONTACT END-->
         
-        <!--FOOTER
+        <!-- --------------------------------------------------------------------------------------------------- -->
+
+        
+        <!-- FOOTER -->
         <footer>
-          <div class="footer-top">
-            <ul class="socials">
-              <li class="facebook">
-                <a href="#" data-hover="Facebook">Facebook</a>
-              </li>
-              <li class="twitter">
-                <a href="#" data-hover="Twitter">Twitter</a>
-              </li>
-              <li class="gplus">
-                <a href="#" data-hover="Google +">Google +</a>
-              </li>
-            </ul>
-          </div>
 
           <div class="footer-bottom">
             <div class="container">
               <div class="row">
-                <img src="images/logo-bottom.png" alt="logo bottom" class="center-block" />
+                <p>簡嘉宏 | 0916975176 | <a href="mailto:jeffjian0612@gmail.com" style="background-color:#ffffa0">歡迎來信</a></p>
+                <!-- <img src="images/logo-bottom.png" alt="logo bottom" class="center-block" /> -->
               </div>
             </div>
           </div>
         </footer>
-        /.FOOTER-END-->
+        <!-- /.FOOTER-END -->
 
       <!--/.CONTENT END-->
       </div>
