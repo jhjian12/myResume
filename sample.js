@@ -1,1 +1,5 @@
-alert("h");
+function sayHi(){
+    alert('hi');
+}
+
+ß
