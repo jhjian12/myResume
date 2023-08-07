@@ -28,6 +28,7 @@
         // 监听子页面发送的消息
         window.addEventListener('message', function(event) {
         if (event.data && event.data.action === 'resizeIframeWidth') {
+            console.log('receive width:', event.data.width);
             var newWidth = event.data.width;
             var iframe = document.getElementsByTagName('iframe');
             iframe.width = newWidth + 'px';
