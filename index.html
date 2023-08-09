@@ -11,31 +11,86 @@
   </p>
 
 
-<script>
-  var passback = '{passback}';
-  var isResponsiveWidth = false;
-  function dynamicPassback(passbackHtml, setResponsiveWidth){
-    passback = passbackHtml;
-    if(setResponsiveWidth){
-      isResponsiveWidth = true;
+  <script>
+    var passback = '{passback}';
+    var isResponsiveWidth = false;
+    function dynamicPassback(passbackHtml, setResponsiveWidth) {
+      passback = passbackHtml;
+      if (setResponsiveWidth) {
+        isResponsiveWidth = true;
+      }
+      return 0;
     }
-    return 0;
-  }
 
-  // please use this function and put what you would like to show in passback.
-  // if you want to set responsive deal width, please add a "true"(boolean) in the dynamicPassback function as the second parameter
-  dynamicPassback('<iframe src="https://loader.fmkorea.com/_loader/loader.php?load=CpM7%24%24%24read_mobile_bottom%24%24%24%ED%8F%AC%ED%85%90+%ED%84%B0%EC%A7%90+%EC%B5%9C%EC%8B%A0%EC%88%9C+-+%EC%97%90%ED%8E%A8%EC%BD%94%EB%A6%AC%EC%95%84%24%24%24https%3A%2F%2Fm.fmkorea.com%2Findex.php%3Fmid%3Dbest-page%3D2%24%24%24%24%24%24" frameborder="no" scrolling="no" style="border:0;width:100%;height:100px;overflow:hidden;-webkit-overflow-scrolling:touch;"></iframe>'
-    , false);
-  
+    // please use this function and put what you would like to show in passback.
+    // if you want to set responsive deal width, please add a "true"(boolean) in the dynamicPassback function as the second parameter
+    dynamicPassback('<iframe src="https://loader.fmkorea.com/_loader/loader.php?load=CpM7%24%24%24read_mobile_bottom%24%24%24%ED%8F%AC%ED%85%90+%ED%84%B0%EC%A7%90+%EC%B5%9C%EC%8B%A0%EC%88%9C+-+%EC%97%90%ED%8E%A8%EC%BD%94%EB%A6%AC%EC%95%84%24%24%24https%3A%2F%2Fm.fmkorea.com%2Findex.php%3Fmid%3Dbest-page%3D2%24%24%24%24%24%24" frameborder="no" scrolling="no" style="border:0;width:100%;height:100px;overflow:hidden;-webkit-overflow-scrolling:touch;"></iframe>'
+      , false);
+
   // e.g.
   // [disable] responsive deal width: dynamicPassback("<<your passback code>>") or dynamicPassback("<<your passback code>>", false);
   // [enable] responsive deal width: dynamicPassback("<<your passback code>>", true);
-</script>
+  </script>
 
 
 
 
   <div id='idi4vd8xrnwx3g369'></div>
-  <script type='text/javascript' async src='//ad2.apx.appier.net/www/delivery/js.php?zoneid=10179&id=idi4vd8xrnwx3g369'></script>
+  <script type='text/javascript' async
+    src='//ad2.apx.appier.net/www/delivery/js.php?zoneid=10179&id=idi4vd8xrnwx3g369'></script>
+
+  <script>
+    // RT
+    window.appier_q = window.appier_q || [];
+    window.appier_q.push(
+      { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+      { "t": "pv_track", "action_id": "PageView_f109", "track_id": "67b0dce49a2d9ef", "isCountReload": true, "counter": 0 },
+      { "t": "pv_track", "action_id": "ViewTwoPages_7b12", "track_id": "67b0dce49a2d9ef", "isCountReload": false, "counter": 1 })
+    // type_home - no action_id
+    window.appier_q.push(
+      { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+      { "t": "type_home", "content": "" })
+    // type_login
+    var appierRtLgSha256 = "90c21b50f1bdf91d32521691a98ede7b2561e2e839b16edb8367724999e1919c";
+    //========= PLEASE DO NOT CHANGE BELOW =========
+    window.appier_q.push(
+      { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+      { "t": "type_login", "idtype": "email_sha256", "content": appierRtLgSha256, "action_id": "UserLogin_f400", "track_id": "67b0dce49a2d9ef", "opts": { "uu": appierRtLgSha256 } }
+    );
+    // type_listpage1
+    var appierRtSearch = ["玩具", "機器人"];
+    var appierRtProductIDList = ["productID1", "productID2", "produtID3"];
+    //========= PLEASE DO NOT CHANGE BELOW =========
+    window.appier_q.push(
+      { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+      { "t": "type_listpage", "keywords": appierRtSearch, "productIDList": appierRtProductIDList }
+    );
+    // type_listpage2
+    var appierRtCategory = ["ID3C", "IDNotebook"];
+    var appierRtProductIDList = ["productID1", "productID2", "produtID3"];
+    //========= PLEASE DO NOT CHANGE BELOW =========
+    window.appier_q = window.appier_q || [];
+    window.appier_q.push(
+      { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+      { "t": "type_listpage", "categoryIDs": appierRtCategory, "productIDList": appierRtProductIDList }
+    );
+    // type_product
+    var appierRtProduct = [{ "productID": "ID1234", "price": "5000" }];
+    //========= PLEASE DO NOT CHANGE BELOW =========
+    window.appier_q.push(
+      { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+      { "t": "type_product", "itemList": appierRtProduct, "action_id": "ViewProduct_063c", "track_id": "67b0dce49a2d9ef" }
+    );
+
+
+
+
+
+  </script>
+  <script src="//jscdn.appier.net/aa.js?id=test.jeff.com" async></script>
+
+
+
 </body>
+
 </html>
