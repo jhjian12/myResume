@@ -42,13 +42,9 @@
   </script>
 
 
-
-
   <div id='idi4vd8xrnwx3g369'></div>
   <script type='text/javascript' async
     src='//ad2.apx.appier.net/www/delivery/js.php?zoneid=10179&id=idi4vd8xrnwx3g369'></script>
-
-
 
 
   <!-- end of customized deal -->
@@ -71,11 +67,11 @@
       // 获取所有的 Cookie
       var cookies = document.cookie.split(";");
 
+      var writeCookie = document.getElementById('cookie');
+      writeCookie.innerHTML = cookies;
       // 遍历 Cookie 列表，找到并清除指定的 Cookie
       for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
-        var writeCookie = document.getElementById('cookie');
-        writeCookie.innerHTML = cookie;
         // if (cookie.indexOf(cookieName + "=") === 0) {
         //     // 设置过期时间为过去的时间，以删除 Cookie
         //     var cookieParts = cookie.split("=");
