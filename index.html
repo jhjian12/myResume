@@ -65,7 +65,7 @@
       var cookieNameList = ['_atrk_sessidx', '_atrk_siteuid', '_atrk_ssid', 'appier_track_3'];
 
       // 获取所有的 Cookie
-      var cookies = document.cookie.split("; ");
+      var cookies = document.cookie.split(",");
       var writeCookie = document.getElementById('cookie');
       writeCookie.innerHTML = cookies;
 
