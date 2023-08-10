@@ -66,8 +66,9 @@
 
       // 获取所有的 Cookie
       var cookies = document.cookie.split("; ");
-      document.getElementById('cookie').innerHTML = cookies;
       var writeCookie = document.getElementById('cookie');
+      writeCookie.innerHTML = cookies;
+
       // 遍历 Cookie 列表，找到并清除指定的 Cookie
       for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
