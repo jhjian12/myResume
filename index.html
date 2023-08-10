@@ -47,7 +47,9 @@
   <!-- start of web testing tool -->
 
   <!-- first party cookie name -->
-
+  <h1>Web Testing Tool Experimental</h1>
+  <button onclick="findCookie()">please tell me 哭起</button>
+  <div id="cookie"></div>
 
   <script>
 
@@ -64,7 +66,8 @@
       // 遍历 Cookie 列表，找到并清除指定的 Cookie
       for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
-        console.log(cookie);
+        var writeCookie = document.getElementById('cookie');
+        writeCookie.innerHTML = cookie;
         // if (cookie.indexOf(cookieName + "=") === 0) {
         //     // 设置过期时间为过去的时间，以删除 Cookie
         //     var cookieParts = cookie.split("=");
@@ -72,8 +75,6 @@
         //     document.cookie = cookieName + "=" + cookieValue + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
         // }
       }
-
-      findCookie();
     }
   </script>
 
