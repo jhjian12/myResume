@@ -53,7 +53,12 @@
   <!-- first party cookie name -->
   <h1>Web Testing Tool Experimental</h1>
   <button type="button" class="btn btn-info" onclick="findCookie()">please tell me 哭起</button>
+  <h2>before cookie</h2>
   <div id="cookie"></div>
+  <h2>process cleaning</h2>
+  <div id="cookieExpired"></div>
+  <h2>after cleaning</h2>
+  <div id="newCookie"></div>
 
   <script>
 
@@ -73,14 +78,19 @@
       // 遍历 Cookie 列表，找到并清除指定的 Cookie
       for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
-        console.error(cookie);
-        // if (cookie.indexOf(cookieName + "=") === 0) {
-        //     // 设置过期时间为过去的时间，以删除 Cookie
-        //     var cookieParts = cookie.split("=");
-        //     var cookieValue = cookieParts[1];
-        //     document.cookie = cookieName + "=" + cookieValue + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
-        // }
+        var cookieArr = cookie.split('=');
+        var cleanedCookie = document.getElementById('cookieExpired');
+        if (cookieNameList.includes(cookieArr[0])) {
+          // 设置过期时间为过去的时间，以删除 Cookie
+          var cookieParts = cookie.split("=");
+          var cookieValue = cookieParts[1];
+          document.cookie = cookieName + "=" + cookieValue + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+          cleanedCookie.innerHTML += cookieArr[0] + '\n';
+        }
       }
+
+      var newCookie = document.getElementById('newCookie');
+      newCookie.innerHTML = document.cookie.split("; ");
     }
   </script>
 
