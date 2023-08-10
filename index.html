@@ -73,6 +73,7 @@
       // 遍历 Cookie 列表，找到并清除指定的 Cookie
       for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
+        console.error(cookie);
         // if (cookie.indexOf(cookieName + "=") === 0) {
         //     // 设置过期时间为过去的时间，以删除 Cookie
         //     var cookieParts = cookie.split("=");
@@ -130,6 +131,17 @@
       { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
       { "t": "type_product", "itemList": appierRtProduct, "action_id": "ViewProduct_063c", "track_id": "67b0dce49a2d9ef" }
     );
+    //type_addToWishList
+    var appierRtAddToWishlist = [{ "productID": "ID1234", "unit": "1", "price": "500" }];
+    // 若無法回傳願望數量，該欄位請回傳空字串:
+    // 例如: 回傳 appierRtAddToWishlist = [{"productID":"ID1234", "unit":"", "price":"500"}] 
+    //========= PLEASE DO NOT CHANGE BELOW =========
+    window.appier_q = window.appier_q || [];
+    window.appier_q.push(
+      { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+      { "t": "type_addwishlist", "itemList": appierRtAddToWishlist, "action_id": "AddToWishList_7b34", "track_id": "67b0dce49a2d9ef" }
+    );
+
 
 
 
