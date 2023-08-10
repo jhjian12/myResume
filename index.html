@@ -65,13 +65,14 @@
       var cookieNameList = ['_atrk_sessidx', '_atrk_siteuid', '_atrk_ssid', 'appier_track_3'];
 
       // 获取所有的 Cookie
-      var cookies = document.cookie.split(";");
+      var cookies = document.cookie.split(",");
 
       var writeCookie = document.getElementById('cookie');
-      writeCookie.innerHTML = cookies;
       // 遍历 Cookie 列表，找到并清除指定的 Cookie
       for (var i = 0; i < cookies.length; i++) {
         var cookie = cookies[i].trim();
+        var writeCookie = document.getElementById('cookie');
+        writeCookie.innerHTML = cookie;
         // if (cookie.indexOf(cookieName + "=") === 0) {
         //     // 设置过期时间为过去的时间，以删除 Cookie
         //     var cookieParts = cookie.split("=");
