@@ -148,11 +148,13 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "pv_track", "action_id": "PageView_f109", "track_id": "67b0dce49a2d9ef", "isCountReload": true, "counter": 0 },
             { "t": "pv_track", "action_id": "ViewTwoPages_7b12", "track_id": "67b0dce49a2d9ef", "isCountReload": false, "counter": 1 })
+          break;
         case tag.home:
           console.log('type_home - no action_id');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_home", "content": "" })
+          break;
         case tag.login:
           console.log('type_login');
           var appierRtLgSha256 = "90c21b50f1bdf91d32521691a98ede7b2561e2e839b16edb8367724999e1919c";
@@ -160,6 +162,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_login", "idtype": "email_sha256", "content": appierRtLgSha256, "action_id": "UserLogin_f400", "track_id": "67b0dce49a2d9ef", "opts": { "uu": appierRtLgSha256 } }
           );
+          break;
         case tag.listpage:
           console.log('type_listpage1');
           var appierRtSearch = ["玩具", "機器人"];
@@ -168,6 +171,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_listpage", "keywords": appierRtSearch, "productIDList": appierRtProductIDList }
           );
+          break;
         case tag.listpage2:
           console.log('type_listpage2');
           var appierRtCategory = ["ID3C", "IDNotebook"];
@@ -176,6 +180,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_listpage", "categoryIDs": appierRtCategory, "productIDList": appierRtProductIDList }
           );
+          break;
         case tag.product:
           console.log('type_product');
           var appierRtProduct = [{ "productID": "ID1234", "price": "5000" }];
@@ -183,6 +188,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_product", "itemList": appierRtProduct, "action_id": "ViewProduct_063c", "track_id": "67b0dce49a2d9ef" }
           );
+          break;
         case tag.addwishlist:
           console.log('type_addToWishList');
           var appierRtAddToWishlist = [{ "productID": "ID1234", "unit": "1", "price": "500" }];
@@ -193,6 +199,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_addwishlist", "itemList": appierRtAddToWishlist, "action_id": "AddToWishList_7b34", "track_id": "67b0dce49a2d9ef" }
           );
+          break;
         case tag.wishlist:
           console.log('type_wishlist');
           var appierRtWishList = [
@@ -203,6 +210,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_wishlist", "itemList": appierRtWishList, "action_id": "ViewWishList_f5c4", "track_id": "67b0dce49a2d9ef" }
           );
+          break;
         case tag.addcart:
           console.log('type_addCart');
           var appierRtAddToCart = [{ "productID": "ID1234", "unit": "1", "price": "500" }];
@@ -212,6 +220,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_addcart", "itemList": appierRtAddToCart, "action_id": "AddToCart_11b4", "track_id": "67b0dce49a2d9ef" }
           );
+          break;
         case tag.cart:
           console.log('type_cart');
           var appierRtCartList = [
@@ -224,6 +233,7 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_cart", "itemList": appierRtCartList, "totalvalue": appierRtPrice, "action_id": "ViewCart_527b", "track_id": "67b0dce49a2d9ef" }
           );
+          break;
         case tag.purchase:
           console.log('type_purchase');
           var appierRtorderId = "OD123456";
@@ -241,21 +251,25 @@
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_purchase", "itemList": appierRtItemList, "totalvalue": appierRtPrice, "currency": appierRtCurrency, "action_id": "Purchase_f6aa", "track_id": "67b0dce49a2d9ef", "opts": { "uu": appierRtorderId, "action_param1": JSON.stringify(appierRtItemList), "action_param2": appierRtorderId, "total_revenue": appierRtPrice, "currency": appierRtCurrency } }
           );
+          break;
         case tag.landing:
           console.log('type_landing');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_landing", "action_id": "ViewLanding_6572", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
+          break;
         case tag.conversion:
           console.log('type_conversion');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_conversion", "content": "submit", "action_id": "Conversion_9215", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
+          break;
         case tag.process:
           console.log('type_process');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_process", "content": "submit", "action_id": "Process_f09b", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
+          break;
         default:
           console.log('trigger {0} tag', tagType);
       }
