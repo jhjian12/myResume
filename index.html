@@ -117,7 +117,7 @@
 
 
   <script>
-    window.appier_q = window.appier_q || [];
+
     const tagType = {
       "RT": "RT",
       "home": "home",
@@ -135,101 +135,96 @@
       "landing": "landing"
     }
 
+    window.appier_q = window.appier_q || [];
+
+
     var triggerTag = (tagType) => {
       switch (tagType) {
         case tagType.RT:
-          // RT
+          console.log('type_RT');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "pv_track", "action_id": "PageView_f109", "track_id": "67b0dce49a2d9ef", "isCountReload": true, "counter": 0 },
             { "t": "pv_track", "action_id": "ViewTwoPages_7b12", "track_id": "67b0dce49a2d9ef", "isCountReload": false, "counter": 1 })
         case tagType.home:
-          // type_home - no action_id
+          console.log('type_home - no action_id');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_home", "content": "" })
         case tagType.login:
-          // type_login
+          console.log('type_login');
           var appierRtLgSha256 = "90c21b50f1bdf91d32521691a98ede7b2561e2e839b16edb8367724999e1919c";
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_login", "idtype": "email_sha256", "content": appierRtLgSha256, "action_id": "UserLogin_f400", "track_id": "67b0dce49a2d9ef", "opts": { "uu": appierRtLgSha256 } }
           );
         case tagType.listpage:
-          // type_listpage1
+          console.log('type_listpage1');
           var appierRtSearch = ["玩具", "機器人"];
           var appierRtProductIDList = ["productID1", "productID2", "produtID3"];
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_listpage", "keywords": appierRtSearch, "productIDList": appierRtProductIDList }
           );
         case tagType.listpage2:
-          // type_listpage2
+          console.log('type_listpage2');
           var appierRtCategory = ["ID3C", "IDNotebook"];
           var appierRtProductIDList = ["productID1", "productID2", "produtID3"];
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q = window.appier_q || [];
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_listpage", "categoryIDs": appierRtCategory, "productIDList": appierRtProductIDList }
           );
         case tagType.product:
-          // type_product
+          console.log('type_product');
           var appierRtProduct = [{ "productID": "ID1234", "price": "5000" }];
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_product", "itemList": appierRtProduct, "action_id": "ViewProduct_063c", "track_id": "67b0dce49a2d9ef" }
           );
         case tagType.addwishlist:
-          //type_addToWishList
+          console.log('type_addToWishList');
           var appierRtAddToWishlist = [{ "productID": "ID1234", "unit": "1", "price": "500" }];
           // 若無法回傳願望數量，該欄位請回傳空字串:
           // 例如: 回傳 appierRtAddToWishlist = [{"productID":"ID1234", "unit":"", "price":"500"}] 
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q = window.appier_q || [];
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_addwishlist", "itemList": appierRtAddToWishlist, "action_id": "AddToWishList_7b34", "track_id": "67b0dce49a2d9ef" }
           );
         case tagType.wishlist:
-          // type_wishlist
+          console.log('type_wishlist');
           var appierRtWishList = [
             { "productID": "ID1234", "unit": "1", "price": "500" },
             { "productID": "ID5678", "unit": "2", "price": "250" }];
           // 若無法回傳願望品項數量，該欄位請回傳空字串，或預設數量為 1 即可。
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_wishlist", "itemList": appierRtWishList, "action_id": "ViewWishList_f5c4", "track_id": "67b0dce49a2d9ef" }
           );
         case tagType.addcart:
-          // type_addCart
+          console.log('type_addCart');
           var appierRtAddToCart = [{ "productID": "ID1234", "unit": "1", "price": "500" }];
           // 若無法回傳購買數量，該欄位請回傳空字串:
           // 例如: 回傳 appierRtAddToCart = [{"productID":"ID1234", "unit":"", "price":"500"}] 
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_addcart", "itemList": appierRtAddToCart, "action_id": "AddToCart_11b4", "track_id": "67b0dce49a2d9ef" }
           );
         case tagType.cart:
-          // type_cart
+          console.log('type_cart');
           var appierRtCartList = [
             { "productID": "ID1234", "unit": "1", "price": "500" },
             { "productID": "ID5678", "unit": "2", "price": "250" }];
           // 若無法回傳購買數量，該欄位請回傳空字串:
           // 例如: 回傳 appierRtAddToCart = [{"productID":"ID1234", "unit":"", "price":"500"}]
           var appierRtPrice = "1000";
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_cart", "itemList": appierRtCartList, "totalvalue": appierRtPrice, "action_id": "ViewCart_527b", "track_id": "67b0dce49a2d9ef" }
           );
         case tagType.purchase:
-          // type_purchase
+          console.log('type_purchase');
           var appierRtorderId = "OD123456";
           var appierRtItemList = [
             { "productID": "ID1234", "unit": "1", "price": "500" },
@@ -241,23 +236,22 @@
           // 例如: 回傳 appierRtItemList = [{"productID":"ID1234", "unit":"", "price":"500"}] 
           var appierRtPrice = "1000";
           var appierRtCurrency = "USD";
-          //========= PLEASE DO NOT CHANGE BELOW =========
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_purchase", "itemList": appierRtItemList, "totalvalue": appierRtPrice, "currency": appierRtCurrency, "action_id": "Purchase_f6aa", "track_id": "67b0dce49a2d9ef", "opts": { "uu": appierRtorderId, "action_param1": JSON.stringify(appierRtItemList), "action_param2": appierRtorderId, "total_revenue": appierRtPrice, "currency": appierRtCurrency } }
           );
         case tagType.landing:
-          // type_landing
+          console.log('type_landing');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_landing", "action_id": "ViewLanding_6572", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
         case tagType.conversion:
-          // type_conversion
+          console.log('type_conversion');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_conversion", "content": "submit", "action_id": "Conversion_9215", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
         case tagType.process:
-          // type_process
+          console.log('type_process');
           window.appier_q.push(
             { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
             { "t": "type_process", "content": "submit", "action_id": "Process_f09b", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
