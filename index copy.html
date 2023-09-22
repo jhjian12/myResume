@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <h1>Customized Deal Demo</h1>
+  <!-- start of customized deal -->
+  <script>
+    var passback = '{passback}';
+    var isResponsiveWidth = false;
+    function dynamicPassback(passbackHtml, setResponsiveWidth) {
+      passback = passbackHtml;
+      if (setResponsiveWidth) {
+        isResponsiveWidth = true;
+      }
+      return 0;
+    }
+
+    dynamicPassback(
+      '<img src="https://i.imgur.com/AwtvtSa.png">'
+      , true);
+
+  </script>
+
+
+  <div id='idi4vd8xrnwx3g369'></div>
+  <script type='text/javascript' async
+    src='//ad2.apx.appier.net/www/delivery/js.php?zoneid=10180&id=idi4vd8xrnwx3g369'></script>
+
+  <!-- end of customized deal -->
+  <!-- start of web testing tool -->
+
+  <!-- first party cookie name -->
+  <h1>Web Testing Tool Experimental</h1>
+  <h2>cleaning first party cookie</h2>
+  <button type="button" class="btn btn-info" onclick="findCookie()">Current Coikie</button>
+  <h2>before cookie</h2>
+  <div id="cookie"></div>
+  <h2>process cleaning</h2>
+  <div id="cookieExpired"></div>
+  <h2>after cleaning</h2>
+  <div id="newCookie"></div>
+
+  <script>
+
+    var findCookie = () => {
+      // 获取当前域名
+      var domain = window.location.hostname;
+
+      // 要清除的 Cookie 名称
+      var cookieNameList = ['_atrk_sessidx', '_atrk_siteuid', '_atrk_ssid', 'appier_track_3'];
+
+      // 获取所有的 Cookie
+      var cookies = document.cookie.split("; ");
+      var writeCookie = document.getElementById('cookie');
+      writeCookie.innerHTML = cookies;
+      console.info(cookies);
+
+      // 遍历 Cookie 列表，找到并清除指定的 Cookie
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        var cookieArr = cookie.split('=');
+        var cleanedCookie = document.getElementById('cookieExpired');
+        if (cookieNameList.includes(cookieArr[0])) {
+          // 设置过期时间为过去的时间，以删除 Cookie
+          var cookieParts = cookie.split("=");
+          var cookieValue = cookieParts[1];
+          document.cookie = cookieArr[0] + "=" + cookieValue + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domain;
+          cleanedCookie.innerHTML += cookieArr[0] + '\n';
+        }
+      }
+
+      var newCookie = document.getElementById('newCookie');
+      newCookie.innerHTML = document.cookie.split("; ");
+    }
+  </script>
+
+  <button href="./client2.html">go to client2</button>
+
+  <h1>Trigger Tags</h1>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('RT')">Analytics Tag / RT / PageView</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('home')">home</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('login')">login</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('listpage')">listpage</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('listpage2')">listpage2</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('product')">product</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('addwishlist')">addwishlist</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('wishlist')">wishlist</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('addcart')">addcart</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('cart')">cart</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('purchase')">purchase</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('process')">process</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('conversion')">conversion</button>
+    <button type="button" class="btn btn-secondary" onclick="triggerTag('landing')">landing</button>
+  </div>
+
+
+
+
+  <script>
+
+    const tag = {
+      RT: "RT",
+      home: "home",
+      login: "login",
+      listpage: "listpage",
+      listpage2: "listpage2",
+      product: "product",
+      addwishlist: "addwishlist",
+      wishlist: "wishlist",
+      addcart: "addcart",
+      cart: "cart",
+      purchase: "purchase",
+      process: "process",
+      conversion: "conversion",
+      landing: "landing"
+    }
+
+    window.appier_q = window.appier_q || [];
+
+
+    var triggerTag = (tagType) => {
+      console.log(tagType);
+      switch (tagType) {
+        case tag.RT:
+          console.log('type_RT');
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "pv_track", "action_id": "PageView_f109", "track_id": "67b0dce49a2d9ef", "isCountReload": true, "counter": 0 },
+            { "t": "pv_track", "action_id": "ViewTwoPages_7b12", "track_id": "67b0dce49a2d9ef", "isCountReload": false, "counter": 1 })
+          break;
+        case tag.home:
+          console.log('type_home - no action_id');
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_home", "content": "" })
+          break;
+        case tag.login:
+          console.log('type_login');
+          var appierRtLgSha256 = "90c21b50f1bdf91d32521691a98ede7b2561e2e839b16edb8367724999e1919c";
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_login", "idtype": "email_sha256", "content": appierRtLgSha256, "action_id": "UserLogin_f400", "track_id": "67b0dce49a2d9ef", "opts": { "uu": appierRtLgSha256 } }
+          );
+          break;
+        case tag.listpage:
+          console.log('type_listpage1');
+          var appierRtSearch = ["玩具", "機器人"];
+          var appierRtProductIDList = ["productID1", "productID2", "produtID3"];
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_listpage", "keywords": appierRtSearch, "productIDList": appierRtProductIDList }
+          );
+          break;
+        case tag.listpage2:
+          console.log('type_listpage2');
+          var appierRtCategory = ["ID3C", "IDNotebook"];
+          var appierRtProductIDList = ["productID1", "productID2", "produtID3"];
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_listpage", "categoryIDs": appierRtCategory, "productIDList": appierRtProductIDList }
+          );
+          break;
+        case tag.product:
+          console.log('type_product');
+          var appierRtProduct = [{ "productID": "ID1234", "price": "5000" }];
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_product", "itemList": appierRtProduct, "action_id": "ViewProduct_063c", "track_id": "67b0dce49a2d9ef" }
+          );
+          break;
+        case tag.addwishlist:
+          console.log('type_addToWishList');
+          var appierRtAddToWishlist = [{ "productID": "ID1234", "unit": "1", "price": "500" }];
+          // 若無法回傳願望數量，該欄位請回傳空字串:
+          // 例如: 回傳 appierRtAddToWishlist = [{"productID":"ID1234", "unit":"", "price":"500"}] 
+          window.appier_q = window.appier_q || [];
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_addwishlist", "itemList": appierRtAddToWishlist, "action_id": "AddToWishList_7b34", "track_id": "67b0dce49a2d9ef" }
+          );
+          break;
+        case tag.wishlist:
+          console.log('type_wishlist');
+          var appierRtWishList = [
+            { "productID": "ID1234", "unit": "1", "price": "500" },
+            { "productID": "ID5678", "unit": "2", "price": "250" }];
+          // 若無法回傳願望品項數量，該欄位請回傳空字串，或預設數量為 1 即可。
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_wishlist", "itemList": appierRtWishList, "action_id": "ViewWishList_f5c4", "track_id": "67b0dce49a2d9ef" }
+          );
+          break;
+        case tag.addcart:
+          console.log('type_addCart');
+          var appierRtAddToCart = [{ "productID": "ID1234", "unit": "1", "price": "500" }];
+          // 若無法回傳購買數量，該欄位請回傳空字串:
+          // 例如: 回傳 appierRtAddToCart = [{"productID":"ID1234", "unit":"", "price":"500"}] 
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_addcart", "itemList": appierRtAddToCart, "action_id": "AddToCart_11b4", "track_id": "67b0dce49a2d9ef" }
+          );
+          break;
+        case tag.cart:
+          console.log('type_cart');
+          var appierRtCartList = [
+            { "productID": "ID1234", "unit": "1", "price": "500" },
+            { "productID": "ID5678", "unit": "2", "price": "250" }];
+          // 若無法回傳購買數量，該欄位請回傳空字串:
+          // 例如: 回傳 appierRtAddToCart = [{"productID":"ID1234", "unit":"", "price":"500"}]
+          var appierRtPrice = "1000";
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_cart", "itemList": appierRtCartList, "totalvalue": appierRtPrice, "action_id": "ViewCart_527b", "track_id": "67b0dce49a2d9ef" }
+          );
+          break;
+        case tag.purchase:
+          console.log('type_purchase');
+          var appierRtorderId = "OD123456";
+          var appierRtItemList = [
+            { "productID": "ID1234", "unit": "1", "price": "500" },
+            { "productID": "ID5678", "unit": "2", "price": "250" }];
+          // appierRtItemList 此參數 請以 物件陣列 的格式回傳
+          // 若只有一個商品，也請以 物件陣列 的格式回傳:
+          // 例如: 回傳 appierRtItemList = [{"productID":"ID1234", "unit":"1", "price":"500"}]
+          // 若無法回傳購買數量，該欄位請回傳空字串:
+          // 例如: 回傳 appierRtItemList = [{"productID":"ID1234", "unit":"", "price":"500"}] 
+          var appierRtPrice = "1000";
+          var appierRtCurrency = "USD";
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_purchase", "itemList": appierRtItemList, "totalvalue": appierRtPrice, "currency": appierRtCurrency, "action_id": "Purchase_f6aa", "track_id": "67b0dce49a2d9ef", "opts": { "uu": appierRtorderId, "action_param1": JSON.stringify(appierRtItemList), "action_param2": appierRtorderId, "total_revenue": appierRtPrice, "currency": appierRtCurrency } }
+          );
+          break;
+        case tag.landing:
+          console.log('type_landing');
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_landing", "action_id": "ViewLanding_6572", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
+          break;
+        case tag.conversion:
+          console.log('type_conversion');
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_conversion", "content": "submit", "action_id": "Conversion_9215", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
+          break;
+        case tag.process:
+          console.log('type_process');
+          window.appier_q.push(
+            { "t": "register", "content": { "id": "1d30", "site": "test.jeff.com" } },
+            { "t": "type_process", "content": "submit", "action_id": "Process_f09b", "track_id": "67b0dce49a2d9ef", "opts": { "unique_key": "true" } });
+          break;
+        default:
+          console.log('trigger {0} tag', tagType);
+      }
+    }
+
+
+  </script>
+  <script src="//jscdn.appier.net/aa.js?id=test.jeff.com" async></script>
+
+
+
+</body>
+
+</html>
